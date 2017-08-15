@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Zoom Puzzle</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="menu.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+
+</head>
+
+<body>
+
+  <div class="bodyWrapper">
+
+    <div class="home" id="home">
+
+      <span class="button type1 play" onclick="play()">PLAY</span>
+
+    </div>
+
+    <div class="difficultySelect" id="difficultySelect">
+
+      <span class="menuText">SELECT DIFFICULTY:</span>
+      <div class="difficultyWrapper">
+        <div class="button type2 easy" id="easy" onclick="easy()">EASY</div>
+        <div class="button type2 medium" id="medium" onclick="medium()">MEDIUM</div>
+        <div class="button type2 hard" id="hard" onclick="hard()">HARD</div>
+      </div>
+      <span class="menuText">OR MOVE SLIDER:</span>
+      <input type="range" class="rangeSlider" min="3" max="80" step="1" value="10" oninput="updateValue(this.value)" onchange="updateValue(this.value)">
+      <span class="rangeValue">Difficulty level: <span id="rangeValue">10</span></span>
+      <input type="submit" value="SUBMIT" class="button type3 slider" onclick="sliderValue()"/>
+
+    </div>
+
+    <div class="pictureSelect" id="pictureSelect">
+
+      <span class="menuText">SELECT PICTURE:</span>
+      <div class="pictureWrapper">
+        <div class="picture option1" onclick="picOption1()"></div>
+        <div class="picture option2" onclick="picOption2()"></div>
+        <div class="picture option3" onclick="picOption3()"></div>
+      </div>
+      <span class="menuText">OR PASTE A LINK:</span>
+      <form class="urlForm" onsubmit="return false;">
+        <span>URL:</span>
+        <input type="text" value="http://" class="urlInput" id="urlInput"/>
+        <input type="submit" value="SUBMIT" class="button type3" onclick="urlAddress()"/>
+      </form>
+
+    </div>
+
+    <div class="frame" id="frame"></div>
+
+  </div>
+
+</body>
+</html>
