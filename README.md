@@ -1,3 +1,3 @@
 # Zoom-Puzzle
 
-Developed by Bela Piros.
+Developed by Bela Piros - Work in Progress!
